@@ -1,0 +1,908 @@
+
+/* line 28 : D:\PlannerApp\prepros\stylus\index.styl */
+
+/* line 1 : C:\Users\Ronald\AppData\Local\Prepros\app-7.2.24\resources\app.asar\node_modules\stylus\lib\functions\index.styl */
+
+/* line 297 : C:\Users\Ronald\AppData\Local\Prepros\app-7.2.24\resources\app.asar\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\_Funciones.styl */
+
+/* line 2 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de modificacion de container*/
+
+/* line 3 : D:\PlannerApp\prepros\stylus\index.styl */
+.container {
+  max-width: 1080px;
+}
+
+/* line 8 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el header*/
+
+/* line 28 : D:\PlannerApp\prepros\stylus\component\_Funciones.styl */
+
+/* line 28 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+header {
+  height: 50px;
+  background: linear-gradient(to right, #337ab7, #222);
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+
+/* line 9 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+header .menu {
+  display: none;
+}
+
+/* line 12 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+header nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 18 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+header nav ol {
+  display: flex;
+  padding-left: 13px;
+  margin: 0;
+}
+
+/* line 23 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+header nav ol li {
+  list-style: none;
+  margin-left: 20px;
+  color: #fff;
+}
+
+/* line 28 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+header nav ol li:nth-child(1) {
+  margin-left: 0;
+}
+
+/* line 31 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+header nav ol li:last-child {
+  margin-right: 20px;
+}
+
+/* line 10 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de la barra*/
+
+/* line 32 : D:\PlannerApp\prepros\stylus\component\_header.styl */
+
+/* line 32 : D:\PlannerApp\prepros\stylus\component\_barra.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\_barra.styl */
+
+/* line 2 : D:\PlannerApp\prepros\stylus\component\_barra.styl */
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f0f2f5;
+}
+
+/* line 7 : D:\PlannerApp\prepros\stylus\component\_barra.styl */
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #337ab7, #999);
+  border-radius: 10px;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0px 0px 6px 0px #337ab7;
+}
+
+/* line 12 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el carusel*/
+
+/* line 12 : D:\PlannerApp\prepros\stylus\component\_barra.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel {
+  width: 100%;
+  height: 500px;
+}
+
+/* line 7 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-inner {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+/* line 16 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item {
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  position: absolute;
+}
+
+/* line 24 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 30 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.vista {
+  transform: translateX(0);
+}
+
+/* line 34 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.go-out {
+  animation: go-out 3s forwards;
+}
+
+/* line 38 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.get-in {
+  animation: get-in 3s forwards;
+}
+
+/* line 63 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.transparent {
+  opacity: 0;
+}
+
+/* line 71 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 72 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios {
+  background-color: rgba(51,122,183,0.6);
+  color: #fff;
+  padding: 0.1px;
+}
+
+/* line 77 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios__circle {
+  height: 100px;
+  width: 100px;
+  background-color: #222;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+/* line 87 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios__circle img {
+  width: 65px;
+  height: 65px;
+}
+
+/* line 91 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios__txt {
+  width: 85%;
+  margin: 30px auto;
+}
+
+/* line 95 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios__txt h3 {
+  font-size: 19px;
+  text-align: center;
+}
+
+/* line 99 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios__txt p {
+  line-height: 1.4;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* line 105 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios__txt button {
+  font-size: 15px;
+  display: flex;
+  margin: 50px auto;
+  color: #fff !important;
+  border-color: #fff;
+}
+
+/* line 112 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+.carusel-item .beneficios__txt button:hover {
+  border-color: #007bff;
+}
+
+/* line 116 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+#circleIndicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 15px;
+  padding: 0;
+  border: 1px solid #fff;
+}
+
+/* line 43 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 43 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 43 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 43 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+@keyframes get-in {
+
+/* line 44 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+  0% {
+    transform: translateX(100%);
+  }
+
+/* line 48 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* line 53 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 53 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 53 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 53 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+@keyframes go-out {
+
+/* line 54 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+  0% {
+    transform: translateX(0%);
+  }
+
+/* line 58 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* line 14 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de los beneficios*/
+
+/* line 122 : D:\PlannerApp\prepros\stylus\component\_carusel.styl */
+
+/* line 2 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+
+/* line 2 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor {
+  height: auto;
+  background-image: url("../images/fondoBeneficos.png");
+}
+
+/* line 6 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor--info {
+  background: -webkit-linear-gradient(top, #337ab7 40%, transparent 100%) 70%;
+  padding-top: 20px;
+}
+
+/* line 10 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor--info:nth-child(4) {
+  margin-bottom: 0;
+}
+
+/* line 12 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor hr {
+  opacity: 0.5;
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+
+/* line 18 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor h3 {
+  color: #fff;
+  text-align: center;
+}
+
+/* line 23 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* line 31 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__circle {
+  width: 130px;
+  height: 130px;
+  background: #222;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 39 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__circle img {
+  width: 65%;
+}
+
+/* line 42 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__txt {
+  width: 40%;
+}
+
+/* line 45 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__txt h3 {
+  font-size: 19px;
+}
+
+/* line 48 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__txt p {
+  line-height: 1.4;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* line 53 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__txt button {
+  border-color: #fff;
+  color: #fff;
+  margin: 20px auto;
+  display: flex;
+}
+
+/* line 59 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__txt button:hover {
+  border-color: #007bff;
+  background: linear-gradient(89deg, #337ab7, #222);
+}
+
+/* line 63 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__txt button:focus {
+  box-shadow: none;
+  border-color: transparent;
+  background: linear-gradient(89deg, #337ab7, #222);
+}
+
+/* line 69 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+.beneficios--Contenedor .beneficios__txt button:active {
+  border-color: transparent;
+  background: linear-gradient(89deg, #337ab7, #222);
+}
+
+/* line 16 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el footer*/
+
+/* line 71 : D:\PlannerApp\prepros\stylus\component\_beneficios.styl */
+
+/* line 3 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+
+/* line 3 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+
+/* line 6 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+
+/* line 7 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.infoPlannerApp__cajas--descripcion {
+  height: 530px;
+  background-image: url("../images/Logo_azul.png");
+  background-size: 70% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 20 : D:\PlannerApp\prepros\stylus\component\_Funciones.styl */
+.infoPlannerApp__cajas--descripcion:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #337ab7;
+  top: 0;
+  left: 0;
+}
+
+/* line 14 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.infoPlannerApp__cajas--descripcion p {
+  width: 80%;
+  margin: auto;
+  font-size: 19px;
+  text-align: justify;
+  font-weight: 500;
+}
+
+/* line 21 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.infoPlannerApp__cajas--masDescripcion {
+  height: 530px;
+  background-image: url("../images/Logo_Blanco.png");
+  background-size: 70% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 27 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.infoPlannerApp__cajas--masDescripcion li {
+  list-style: none;
+  font-weight: 700;
+}
+
+/* line 20 : D:\PlannerApp\prepros\stylus\component\_Funciones.styl */
+.infoPlannerApp__cajas--masDescripcion:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+
+/* line 32 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.infoPlannerApp__cajas--footer {
+  height: 530px;
+  background-image: url("../images/Logo_azul.png");
+  background-size: 70% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* line 20 : D:\PlannerApp\prepros\stylus\component\_Funciones.styl */
+.infoPlannerApp__cajas--footer:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #337ab7;
+  top: 0;
+  left: 0;
+}
+
+/* line 37 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.infoPlannerApp__cajas {
+  margin: auto;
+}
+
+/* line 40 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.infoPlannerApp__cajas--footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 47 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.informacion__contenido {
+  margin: auto;
+  display: flex;
+  width: 243px;
+  margin: 20px;
+}
+
+/* line 54 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.informacion__contenido:nth-child(1) {
+  margin-top: 0;
+}
+
+/* line 58 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.informacion__contenido--img {
+  margin-right: 30px;
+}
+
+/* line 60 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.informacion__contenido--img img {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 64 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+
+/* line 65 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.informacion__contenido--text a {
+  color: #000;
+}
+
+/* line 68 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+.informacion__contenido--text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 18 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el el media de 1190px*/
+
+/* line 70 : D:\PlannerApp\prepros\stylus\component\_footer.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\@media\_media1190.styl */
+@media screen and (max-width: 1190px) {
+
+/* line 2 : D:\PlannerApp\prepros\stylus\component\@media\_media1190.styl */
+  .carusel-item .beneficios__txt {
+    width: 83%;
+  }
+}
+
+/* line 20 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el el media de 992px*/
+
+/* line 7 : D:\PlannerApp\prepros\stylus\component\@media\_media1190.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+.alto {
+  height: 550px !important;
+}
+@media screen and (max-width: 991px) {
+
+/* line 5 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .alto {
+    height: 450px !important;
+  }
+
+/* line 8 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .lento {
+    position: relative !important;
+    width: 100% !important;
+    height: 170px !important;
+    background-color: #337ab7;
+  }
+
+/* line 15 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .carusel2 {
+    position: relative;
+  }
+
+/* line 18 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .carusel-item .beneficios {
+    display: flex;
+  }
+
+/* line 24 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .carusel-item .beneficios__txt {
+    width: 70%;
+  }
+
+/* line 27 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .carusel-item .beneficios__txt h3 {
+    font-size: 17px;
+  }
+
+/* line 30 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .carusel-item .beneficios__txt p {
+    font-size: 14px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+/* line 36 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .carusel-item .beneficios__txt button {
+    font-size: 14px;
+    margin: 20px auto;
+  }
+
+/* line 40 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+
+/* line 41 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+
+/* line 42 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .beneficios--Contenedor--info h3 {
+    font-size: 20px;
+  }
+
+/* line 45 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+
+/* line 46 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .beneficios--Contenedor--info .beneficios__circle {
+    width: 110px;
+    height: 110px;
+  }
+
+/* line 51 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .beneficios--Contenedor--info .beneficios__txt {
+    width: 50%;
+  }
+
+/* line 54 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .beneficios--Contenedor--info .beneficios__txt h3 {
+    font-size: 17px;
+  }
+
+/* line 57 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .beneficios--Contenedor--info .beneficios__txt p {
+    font-size: 14px;
+  }
+
+/* line 60 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .beneficios--Contenedor--info .beneficios__txt button {
+    font-size: 14px;
+  }
+
+/* line 63 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .beneficios--Contenedor--info .beneficios__txt .txtAdd {
+    display: none;
+  }
+
+/* line 66 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+
+/* line 67 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .infoPlannerApp__cajas--masDescripcion {
+    background-size: 90% 100%;
+  }
+
+/* line 69 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .infoPlannerApp__cajas--masDescripcion:before {
+    content: "";
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+/* line 78 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .infoPlannerApp__cajas--descripcion {
+    background-size: 90% 100%;
+  }
+
+/* line 82 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .infoPlannerApp__cajas--descripcion p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+/* line 85 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .infoPlannerApp__cajas--descripcion:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+/* line 93 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .infoPlannerApp__cajas--footer {
+    background-size: 90% 100%;
+  }
+
+/* line 95 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+  .infoPlannerApp__cajas--footer:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+/* line 22 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el el media de 768px*/
+
+/* line 101 : D:\PlannerApp\prepros\stylus\component\@media\_media992.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+@media screen and (max-width: 768px) {
+
+/* line 2 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .alto {
+    height: 410px !important;
+  }
+
+/* line 6 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 7 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 8 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .carusel-item .beneficios__circle {
+    width: 85px;
+    height: 85px;
+    margin: auto;
+  }
+
+/* line 13 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .carusel-item .beneficios__circle img {
+    height: 55px;
+    width: 55px;
+  }
+
+/* line 17 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .carusel-item .beneficios__txt {
+    height: 50%;
+    width: 60%;
+    margin-left: -50px;
+  }
+
+/* line 22 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .carusel-item .beneficios__txt p {
+    transition: display 2s;
+    display: none;
+    will-change: display;
+  }
+
+/* line 28 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 29 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .beneficios--Contenedor--info h3 {
+    font-size: 17px;
+  }
+
+/* line 33 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .beneficios--Contenedor--info .beneficios__circle {
+    width: 85px;
+    height: 85px;
+  }
+
+/* line 37 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .beneficios--Contenedor--info .beneficios__circle img {
+    width: 45px;
+    height: 45px;
+    margin: auto;
+  }
+
+/* line 42 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 43 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .beneficios--Contenedor--info .beneficios__txt h3 {
+    font-size: 15px;
+  }
+
+/* line 46 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .beneficios--Contenedor--info .beneficios__txt p {
+    font-size: medium;
+  }
+
+/* line 49 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 50 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 51 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 52 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .beneficios:nth-child(2) .beneficios__circle img {
+    width: 55px;
+    height: 55px;
+  }
+
+/* line 56 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 57 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 58 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--descripcion {
+    background-size: 80% 80%;
+    height: 50vh;
+  }
+
+/* line 62 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--descripcion p {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+/* line 66 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--descripcion:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+/* line 76 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--masDescripcion {
+    background-size: 80% 80%;
+    background-color: #fff;
+    height: 50vh;
+  }
+
+/* line 81 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--masDescripcion:before {
+    content: "";
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+/* line 91 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--footer {
+    background-size: 80% 80%;
+    background-color: #337ab7;
+    height: 50vh;
+    padding: 0;
+  }
+
+/* line 97 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--footer .infoPlannerApp__cajas {
+    margin: auto;
+  }
+
+/* line 100 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  .infoPlannerApp__cajas--footer:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+/* line 110 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+  div .lento {
+    height: 130px !important;
+  }
+}
+
+/* line 24 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el el media de 575px*/
+
+/* line 111 : D:\PlannerApp\prepros\stylus\component\@media\_media768.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+@media screen and (max-width: 575px) {
+
+/* line 2 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+  .alto {
+    height: 340px !important;
+  }
+
+/* line 5 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+
+/* line 6 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+
+/* line 7 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+  header nav ol:nth-child(2) {
+    display: none;
+  }
+
+/* line 10 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+  header nav ol:nth-child(3) {
+    display: block !important;
+  }
+
+/* line 12 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+  header nav ol:nth-child(3) img {
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+/* line 18 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+
+/* line 19 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+  .infoPlannerApp__cajas--descripcion {
+    background-size: 100%;
+  }
+
+/* line 22 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+  .infoPlannerApp__cajas--masDescripcion {
+    background-size: 100%;
+  }
+
+/* line 25 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+  .infoPlannerApp__cajas--footer {
+    background-size: 100%;
+  }
+}
+
+/* line 26 : D:\PlannerApp\prepros\stylus\index.styl */
+/*Aqui inicia el codigo de el el media de 425px*/
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */
+
+/* line 1 : D:\PlannerApp\prepros\stylus\component\@media\_media575.styl */

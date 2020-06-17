@@ -1,0 +1,71 @@
+
+
+.infoPlannerApp
+    // background-color: rgba(22,22,22,0.4)
+    
+    &__cajas
+        &--descripcion
+            info(url("../images/Logo_azul.png"), 530px)
+            display: flex
+            justify-content: center
+
+            BI(colorPrimario, before)
+
+            p 
+                width: 80%;
+                margin: auto;
+                font-size: 19px;
+                text-align: justify;
+                font-weight: 500
+
+        &--masDescripcion
+            info(url("../images/Logo_Blanco.png"), 530px)
+            display: flex
+            justify-content: center
+            align-items: center
+
+            li
+                list-style none
+                font-weight: 700
+
+            BI(colorClaro, before)
+        &--footer
+            BI(colorPrimario, before)
+            info(url("../images/Logo_azul.png"), 530px)
+
+
+.infoPlannerApp__cajas
+    margin: auto
+
+    &--footer
+        display flex
+        justify-content: center
+        // padding-top: 210px
+
+
+
+.informacion__contenido
+    margin: auto
+    display flex
+    // justify-content: space-between
+    width: 243px
+    margin: 20px
+
+    &:nth-child(1)
+        margin-top: 0
+
+
+    &--img
+        margin-right: 30px
+        img
+            width 50px
+            height: 50px
+
+    &--text
+        a
+            color: black
+            cursor: pointer
+            
+            &:hover
+                text-decoration: underline
+        

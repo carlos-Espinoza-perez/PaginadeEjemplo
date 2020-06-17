@@ -1,0 +1,196 @@
+/* Notas */
+/* Animacion 2 */
+/* transform: scale(1.6, 1);
+  transform-origin: right;
+  transition: 2s; */
+/* Animacion 3 */
+/* transform-origin: right;
+    transform: scale(1.5,1);
+    transition: 2s; */
+/* Animcion 4 */
+/*transform-origin: right;
+    transform: scale(1.5, 1);
+    transition: 2s; */
+/* A la animacion de margin se le baja el marge a : 44% */
+/* Animacion 5 */
+/* transform-origin: right;
+    transform: scale(1.5, 1);
+    transition: 2s;  */
+/* A la animacion de margin se le baja el marge a : 70%*/
+:root {
+  --alto: 500px;
+  --ancho: calc(var(--alto) - 110px);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  position: absolute;
+  right: 0;
+}
+.caja {
+  display: grid;
+  grid-template-columns: repeat(8, calc(var(--ancho) / 8));
+  grid-template-rows: repeat(9, calc(var(--alto) / 9.2));
+  width: var(--ancho);
+  height: var(--alto);
+}
+.par:nth-child(1) {
+  background: #337ab7;
+  height: 100%;
+  width: 100%;
+  grid-column: 1/9;
+  grid-row: 1;
+  animation: none 4s forwards;
+}
+.par:nth-child(2) {
+  background: #337ab7;
+  height: 100%;
+  width: 100%;
+  grid-column: 1/9;
+  grid-row: 3;
+  animation: animacion_2 4s forwards;
+}
+@-moz-keyframes animacion_2 {
+  100% {
+    margin-left: 60%;
+  }
+}
+@-webkit-keyframes animacion_2 {
+  100% {
+    margin-left: 60%;
+  }
+}
+@-o-keyframes animacion_2 {
+  100% {
+    margin-left: 60%;
+  }
+}
+@keyframes animacion_2 {
+  100% {
+    margin-left: 60%;
+  }
+}
+.par:nth-child(3) {
+  background: #337ab7;
+  height: 100%;
+  width: 100%;
+  grid-column: 1/9;
+  grid-row: 5;
+  animation: animacion_3 4s forwards;
+}
+@-moz-keyframes animacion_3 {
+  100% {
+    margin-left: 40%;
+  }
+}
+@-webkit-keyframes animacion_3 {
+  100% {
+    margin-left: 40%;
+  }
+}
+@-o-keyframes animacion_3 {
+  100% {
+    margin-left: 40%;
+  }
+}
+@keyframes animacion_3 {
+  100% {
+    margin-left: 40%;
+  }
+}
+.par:nth-child(4) {
+  background: #337ab7;
+  height: 100%;
+  width: 100%;
+  grid-column: 1/4;
+  grid-row: 7;
+  animation: animacion_4 4s forwards;
+}
+@-moz-keyframes animacion_4 {
+  100% {
+    margin-left: 331%;
+  }
+}
+@-webkit-keyframes animacion_4 {
+  100% {
+    margin-left: 331%;
+  }
+}
+@-o-keyframes animacion_4 {
+  100% {
+    margin-left: 331%;
+  }
+}
+@keyframes animacion_4 {
+  100% {
+    margin-left: 331%;
+  }
+}
+.par:nth-child(5) {
+  animation: oculto 1s forwards !important;
+  background: #999;
+  height: 100%;
+  width: 100%;
+  grid-column: 5/9;
+  grid-row: 7;
+  animation: none 4s forwards;
+}
+.par:nth-child(6) {
+  background: #337ab7;
+  height: 100%;
+  width: 100%;
+  grid-column: 1/4;
+  grid-row: 9;
+  animation: animacion_5 4s forwards;
+}
+@-moz-keyframes animacion_5 {
+  100% {
+    margin-left: 431%;
+  }
+}
+@-webkit-keyframes animacion_5 {
+  100% {
+    margin-left: 431%;
+  }
+}
+@-o-keyframes animacion_5 {
+  100% {
+    margin-left: 431%;
+  }
+}
+@keyframes animacion_5 {
+  100% {
+    margin-left: 431%;
+  }
+}
+.par:nth-child(7) {
+  animation: oculto 1s forwards !important;
+  background: #999;
+  height: 100%;
+  width: 100%;
+  grid-column: 5/9;
+  grid-row: 9;
+  animation: none 4s forwards;
+}
+@-moz-keyframes oculto {
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes oculto {
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes oculto {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes oculto {
+  100% {
+    opacity: 0;
+  }
+}

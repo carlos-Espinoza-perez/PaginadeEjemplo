@@ -1,0 +1,32 @@
+header 
+    height 50px
+    background: linear-gradient(to right, colorPrimario, colorOscuro)
+    position: fixed
+    z-index 5
+    width 100%
+    top: 0
+
+    .menu
+        display: none
+
+    nav 
+        height 50px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        ol
+            display: flex
+            padding-left: 13px
+            margin: 0
+            
+            li
+                list-style: none 
+                margin-left: 20px 
+                color: colorClaro
+
+                &:nth-child(1)
+                    margin-left: 0
+
+                &:last-child
+                    margin-right: 20px

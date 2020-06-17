@@ -1,0 +1,101 @@
+.alto 
+    height 550px !important
+
+@media screen and (max-width 991px)
+    .alto
+        height 450px !important
+
+    .lento
+        position relative !important
+        width 100% !important
+        height: 170px !important
+        background-color: colorPrimario
+
+
+    .carusel2 
+        position relative
+    
+    .carusel-item .beneficios
+        display flex
+
+        // &__circle
+        //     width 30%
+
+        &__txt
+            width 70%
+
+            h3
+                font-size: fontSize-md-t
+
+            p
+                font-size: fontSize-md-c
+                width 80%
+                margin: auto
+                text-align: center  
+            
+            button 
+                font-size: fontSize-md-c
+                margin 20px auto
+
+    .beneficios--Contenedor
+        &--info
+            h3
+                font-size: 20px
+
+            .beneficios
+                &__circle
+                    width 110px
+                    height: 110px
+                    // margin: auto
+
+                &__txt
+                    width: 50%
+
+                    h3
+                        font-size: fontSize-md-t
+
+                    p
+                        font-size: fontSize-md-c
+
+                    button 
+                        font-size: fontSize-md-c
+
+                    .txtAdd
+                        display none
+                        
+    .infoPlannerApp
+        &__cajas--masDescripcion
+            background-size: 90% 100%
+            &:before
+                content: ""
+                background-color: colorClaro
+                height 100%
+                width: 100%
+                position: absolute
+                z-index: -1
+
+
+        &__cajas--descripcion
+            background-size: 90% 100%
+            
+            
+            p
+                font-size: 15px 
+                font-weight: bold 
+            &:before
+                content: ""
+                background-color: colorPrimario
+                height 100%
+                width: 100%
+                position: absolute
+                z-index: -1
+        
+        &__cajas--footer
+            background-size: 90% 100%
+            &:before
+                content: ""
+                background-color: colorPrimario
+                height 100%
+                width: 100%
+                position: absolute
+                z-index: -1

@@ -1,0 +1,19 @@
+.infoPlannerApp.position-relative.container
+    .fondoParallax.infoPlannerApp__cajas--descripcion.position-relative
+        p   
+            | Es el software desarrollado para la administración de proyectos y recursos humanos para empresas dedicadas a construcción.
+            | Con PlannerApp 360 podras integrar toda la organización para poder tener beneficios que agregan valor como:
+    .fondoParallax.infoPlannerApp__cajas--masDescripcion.position-relative
+        //- img(src="../images/logo_blanco.png", alt="alt" style="z-index: -1;").position-absolute.w-100.h-100
+        .text-descripcion
+            each n in ["Personalización segun las necesidades", "Colaboración entre las areas de la organización", "Movilidad para usar en dispositivos conectados a internet", "Datos para realizar inteligencia de negocio"]
+                li 
+                    img(src="../images/sendBi.svg", alt="alt" width="16" style="margin-right: 10px;")
+                    | #{n}
+    .fondoParallax.infoPlannerApp__cajas--footer.position-relative
+        .infoPlannerApp__cajas
+            +textFooter("../images/emailWhite.svg", "E-Mail", "a", "info@plannerapp.net")               
+            +textFooter("../images/answer.svg", "Telefono", "p","(506) 7041 2463")               
+            +textFooter("../images/faceboockCircle.svg", "Faceboock", "a", "PlannerApp 360")               
+
+    

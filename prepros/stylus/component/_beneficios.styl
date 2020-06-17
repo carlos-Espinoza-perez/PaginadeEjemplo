@@ -1,0 +1,71 @@
+
+.beneficios--Contenedor
+    height auto
+    background-image url('../images/fondoBeneficos.png')
+
+    &--info
+        background: -webkit-linear-gradient(top, rgba(51,122,183,1) 40%, transparent 100%)70%
+        padding-top: 20px
+
+        &:nth-child(4)
+            margin-bottom 0
+    hr 
+        opacity 0.5
+        width: 80%
+        display flex
+        margin: auto
+
+    h3 
+        color: colorClaro
+        text-align: center
+
+    
+    .beneficios
+        color: colorClaro
+        display: flex
+        justify-content: space-around
+        margin-top: 50px
+        margin-bottom 30px
+            
+
+        &__circle
+            width: 130px;
+            height: 130px;
+            background: colorOscuro;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+
+            img
+                width: 65% 
+
+        &__txt
+            width: 40%
+
+            h3
+                font-size: 19px
+
+            p
+                line-height: 1.4
+                font-size: 15px
+                font-weight: 400
+
+            button  
+                border-color: colorClaro
+                color: white
+                margin: 20px auto
+                display flex
+
+                &:hover
+                    border-color: #007bff
+                    background: linear-gradient(89deg, colorPrimario, colorOscuro)
+
+                &:focus
+                    box-shadow: none
+                    border-color: transparent
+                    background: linear-gradient(89deg, colorPrimario, colorOscuro)
+
+
+                &:active
+                    border-color: transparent
+                    background: linear-gradient(89deg, colorPrimario, colorOscuro)

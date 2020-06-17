@@ -1,0 +1,780 @@
+/*Aqui inicia el codigo de modificacion de container*/
+.container {
+  max-width: 1080px;
+}
+/*Aqui inicia el codigo de el header*/
+header {
+  height: 50px;
+  background: linear-gradient(to right, #337ab7, #222);
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+header .menu {
+  display: none;
+}
+header nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ol {
+  display: flex;
+  padding-left: 13px;
+  margin: 0;
+}
+header nav ol li {
+  list-style: none;
+  margin-left: 20px;
+  color: #fff;
+}
+header nav ol li:nth-child(1) {
+  margin-left: 0;
+}
+header nav ol li:last-child {
+  margin-right: 20px;
+}
+/*Aqui inicia el codigo de la barra*/
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f0f2f5;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #337ab7, #999);
+  border-radius: 10px;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0px 0px 6px 0px #337ab7;
+}
+/*Aqui inicia el codigo de el carusel*/
+.carusel {
+  width: 100%;
+  height: 500px;
+}
+.carusel-inner {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+.carusel-item {
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  position: absolute;
+}
+.carusel-item img {
+  width: 100%;
+  height: 100%;
+}
+.vista {
+  transform: translateX(0);
+}
+.go-out {
+  animation: go-out 3s forwards;
+}
+.get-in {
+  animation: get-in 3s forwards;
+}
+.transparent {
+  opacity: 0;
+}
+.carusel-item .beneficios {
+  background-color: rgba(51,122,183,0.6);
+  color: #fff;
+  padding: 0.1px;
+}
+.carusel-item .beneficios__circle {
+  height: 100px;
+  width: 100px;
+  background-color: #222;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.carusel-item .beneficios__circle img {
+  width: 65px;
+  height: 65px;
+}
+.carusel-item .beneficios__txt {
+  width: 85%;
+  margin: 30px auto;
+}
+.carusel-item .beneficios__txt h3 {
+  font-size: 19px;
+  text-align: center;
+}
+.carusel-item .beneficios__txt p {
+  line-height: 1.4;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: justify;
+}
+.carusel-item .beneficios__txt button {
+  font-size: 15px;
+  display: flex;
+  margin: 50px auto;
+  color: #fff !important;
+  border-color: #fff;
+}
+.carusel-item .beneficios__txt button:hover {
+  border-color: #007bff;
+}
+#circleIndicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 15px;
+  padding: 0;
+  border: 1px solid #fff;
+}
+@-moz-keyframes get-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes get-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-o-keyframes get-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes get-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes go-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes go-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-o-keyframes go-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes go-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/*Aqui inicia el codigo de los beneficios*/
+.beneficios--Contenedor {
+  height: auto;
+  background-image: url("../images/fondoBeneficos.png");
+}
+.beneficios--Contenedor--info {
+  background: -webkit-linear-gradient(top, #337ab7 40%, transparent 100%) 70%;
+  padding-top: 20px;
+}
+.beneficios--Contenedor--info:nth-child(4) {
+  margin-bottom: 0;
+}
+.beneficios--Contenedor hr {
+  opacity: 0.5;
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.beneficios--Contenedor h3 {
+  color: #fff;
+  text-align: center;
+}
+.beneficios--Contenedor .beneficios {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.beneficios--Contenedor .beneficios__circle {
+  width: 130px;
+  height: 130px;
+  background: #222;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+.beneficios--Contenedor .beneficios__circle img {
+  width: 65%;
+}
+.beneficios--Contenedor .beneficios__txt {
+  width: 40%;
+}
+.beneficios--Contenedor .beneficios__txt h3 {
+  font-size: 19px;
+}
+.beneficios--Contenedor .beneficios__txt p {
+  line-height: 1.4;
+  font-size: 15px;
+  font-weight: 400;
+}
+.beneficios--Contenedor .beneficios__txt button {
+  border-color: #fff;
+  color: #fff;
+  margin: 20px auto;
+  display: flex;
+}
+.beneficios--Contenedor .beneficios__txt button:hover {
+  border-color: #007bff;
+  background: linear-gradient(89deg, #337ab7, #222);
+}
+.beneficios--Contenedor .beneficios__txt button:focus {
+  box-shadow: none;
+  border-color: transparent;
+  background: linear-gradient(89deg, #337ab7, #222);
+}
+.beneficios--Contenedor .beneficios__txt button:active {
+  border-color: transparent;
+  background: linear-gradient(89deg, #337ab7, #222);
+}
+/*Aqui inicia el codigo de el footer*/
+.infoPlannerApp__cajas--descripcion {
+  height: 530px;
+  background-image: url("../images/Logo_azul.png");
+  background-size: 60% 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+.infoPlannerApp__cajas--descripcion:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #337ab7;
+  top: 0;
+  left: 0;
+}
+.infoPlannerApp__cajas--descripcion p {
+  width: 80%;
+  margin: auto;
+  font-size: 19px;
+  text-align: justify;
+  font-weight: 500;
+}
+.infoPlannerApp__cajas--masDescripcion {
+  height: 530px;
+  background-image: url("../images/Logo_Blanco.png");
+  background-size: 60% 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoPlannerApp__cajas--masDescripcion li {
+  list-style: none;
+  font-weight: 700;
+}
+.infoPlannerApp__cajas--masDescripcion:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+.infoPlannerApp__cajas--footer {
+  height: 530px;
+  background-image: url("../images/Logo_azul.png");
+  background-size: 60% 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.infoPlannerApp__cajas--footer:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #337ab7;
+  top: 0;
+  left: 0;
+}
+.infoPlannerApp__cajas {
+  margin: auto;
+}
+.infoPlannerApp__cajas--footer {
+  display: flex;
+  justify-content: center;
+}
+.informacion__contenido {
+  margin: auto;
+  display: flex;
+  width: 243px;
+  margin: 20px;
+}
+.informacion__contenido:nth-child(1) {
+  margin-top: 0;
+}
+.informacion__contenido--img {
+  margin-right: 30px;
+}
+.informacion__contenido--img img {
+  width: 50px;
+  height: 50px;
+}
+.informacion__contenido--text a {
+  color: #000;
+  cursor: pointer;
+}
+.informacion__contenido--text a:hover {
+  text-decoration: underline;
+}
+/*Aqui inicia el codigo de el el media de 1190px*/
+@media screen and (max-width: 1190px) {
+  .carusel-item .beneficios__txt {
+    width: 83%;
+  }
+}
+/*Aqui inicia el codigo de el el media de 992px*/
+.alto {
+  height: 550px !important;
+}
+@media screen and (max-width: 991px) {
+  .alto {
+    height: 450px !important;
+  }
+  .lento {
+    position: relative !important;
+    width: 100% !important;
+    height: 170px !important;
+    background-color: #337ab7;
+  }
+  .carusel2 {
+    position: relative;
+  }
+  .carusel-item .beneficios {
+    display: flex;
+  }
+  .carusel-item .beneficios__txt {
+    width: 70%;
+  }
+  .carusel-item .beneficios__txt h3 {
+    font-size: 17px;
+  }
+  .carusel-item .beneficios__txt p {
+    font-size: 14px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  .carusel-item .beneficios__txt button {
+    font-size: 14px;
+    margin: 20px auto;
+  }
+  .beneficios--Contenedor--info h3 {
+    font-size: 20px;
+  }
+  .beneficios--Contenedor--info .beneficios__circle {
+    width: 110px;
+    height: 110px;
+  }
+  .beneficios--Contenedor--info .beneficios__txt {
+    width: 50%;
+  }
+  .beneficios--Contenedor--info .beneficios__txt h3 {
+    font-size: 17px;
+  }
+  .beneficios--Contenedor--info .beneficios__txt p {
+    font-size: 14px;
+  }
+  .beneficios--Contenedor--info .beneficios__txt button {
+    font-size: 14px;
+  }
+  .beneficios--Contenedor--info .beneficios__txt .txtAdd {
+    display: none;
+  }
+  .infoPlannerApp__cajas--masDescripcion {
+    background-size: 90% 100%;
+  }
+  .infoPlannerApp__cajas--masDescripcion:before {
+    content: "";
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  .infoPlannerApp__cajas--descripcion {
+    background-size: 90% 100%;
+  }
+  .infoPlannerApp__cajas--descripcion p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .infoPlannerApp__cajas--descripcion:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  .infoPlannerApp__cajas--footer {
+    background-size: 90% 100%;
+  }
+  .infoPlannerApp__cajas--footer:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+/*Aqui inicia el codigo de el el media de 768px*/
+@media screen and (max-width: 768px) {
+  .alto {
+    height: 410px !important;
+  }
+  .carusel-item .beneficios__circle {
+    width: 85px;
+    height: 85px;
+    margin: auto;
+  }
+  .carusel-item .beneficios__circle img {
+    height: 55px;
+    width: 55px;
+  }
+  .carusel-item .beneficios__txt {
+    height: 50%;
+    width: 60%;
+    margin-left: -50px;
+  }
+  .carusel-item .beneficios__txt p {
+    transition: display 2s;
+    display: none;
+    will-change: display;
+  }
+  .beneficios--Contenedor--info h3 {
+    font-size: 17px;
+  }
+  .beneficios--Contenedor--info .beneficios__circle {
+    width: 85px;
+    height: 85px;
+  }
+  .beneficios--Contenedor--info .beneficios__circle img {
+    width: 45px;
+    height: 45px;
+    margin: auto;
+  }
+  .beneficios--Contenedor--info .beneficios__txt h3 {
+    font-size: 15px;
+  }
+  .beneficios--Contenedor--info .beneficios__txt p {
+    font-size: medium;
+  }
+  .beneficios:nth-child(2) .beneficios__circle img {
+    width: 55px;
+    height: 55px;
+  }
+  .infoPlannerApp__cajas--descripcion {
+    background-size: 80% 80%;
+    height: 50vh;
+  }
+  .infoPlannerApp__cajas--descripcion p {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .infoPlannerApp__cajas--descripcion:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .infoPlannerApp__cajas--masDescripcion {
+    background-size: 80% 80%;
+    background-color: #fff;
+    height: 50vh;
+  }
+  .infoPlannerApp__cajas--masDescripcion:before {
+    content: "";
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .infoPlannerApp__cajas--footer {
+    background-size: 80% 80%;
+    background-color: #337ab7;
+    height: 50vh;
+    padding: 0;
+  }
+  .infoPlannerApp__cajas--footer .infoPlannerApp__cajas {
+    margin: auto;
+  }
+  .infoPlannerApp__cajas--footer:before {
+    content: "";
+    background-color: #337ab7;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  div .lento {
+    height: 130px !important;
+  }
+}
+/*Aqui inicia el codigo de el el media de 575px*/
+@media screen and (max-width: 575px) {
+  .alto {
+    height: 340px !important;
+  }
+  header nav ol:nth-child(2) {
+    display: none;
+  }
+  header nav ol:nth-child(3) {
+    display: block !important;
+  }
+  header nav ol:nth-child(3) img {
+    width: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .infoPlannerApp__cajas--descripcion {
+    background-size: 100%;
+  }
+  .infoPlannerApp__cajas--masDescripcion {
+    background-size: 100%;
+  }
+  .infoPlannerApp__cajas--footer {
+    background-size: 100%;
+  }
+}
+/*Aqui inicia el codigo de el el media de 425px*/
+strong {
+  font-weight: 900;
+}
+.opacity {
+  display: inline-block !important;
+  transition: 0.8s;
+  background-color: rgba(0,0,0,0.3);
+}
+.cajas-opacity {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  display: none;
+}
+.cajas {
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  display: none;
+}
+.pregunta {
+  margin: auto;
+  width: 300px;
+  height: 175px;
+  align-items: center;
+  text-align: center;
+  padding: 1px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.pregunta .text {
+  margin: 30px auto;
+  width: 129px;
+}
+.pregunta .btn {
+  margin: 12px;
+}
+.pregunta .btn:active {
+  transform: scale(0.5);
+  transition: 1s;
+}
+.modalIn {
+  animation: modalIn 0.8s forwards;
+}
+.modalOut {
+  animation: modalOut 0.8s forwards;
+}
+@-moz-keyframes modalOut {
+  0% {
+    transform: translateY(5%);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(-3000%);
+  }
+}
+@-webkit-keyframes modalOut {
+  0% {
+    transform: translateY(5%);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(-3000%);
+  }
+}
+@-o-keyframes modalOut {
+  0% {
+    transform: translateY(5%);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(-3000%);
+  }
+}
+@keyframes modalOut {
+  0% {
+    transform: translateY(5%);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(-3000%);
+  }
+}
+@-moz-keyframes modalIn {
+  0% {
+    transform: translateY(-3000%);
+  }
+  60% {
+    transform: translateY(25%);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes modalIn {
+  0% {
+    transform: translateY(-3000%);
+  }
+  60% {
+    transform: translateY(25%);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes modalIn {
+  0% {
+    transform: translateY(-3000%);
+  }
+  60% {
+    transform: translateY(25%);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes modalIn {
+  0% {
+    transform: translateY(-3000%);
+  }
+  60% {
+    transform: translateY(25%);
+  }
+  75% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

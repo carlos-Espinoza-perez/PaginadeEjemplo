@@ -1,0 +1,147 @@
+
+// /* Notas */
+
+// /* Animacion 2 */
+//   /* transform: scale(1.6, 1);
+//   transform-origin: right;
+//   transition: 2s; */
+
+// /* Animacion 3 */
+
+//   /* transform-origin: right;
+//     transform: scale(1.5,1);
+//     transition: 2s; */
+
+// /* Animcion 4 */
+
+//   /*transform-origin: right;
+//     transform: scale(1.5, 1);
+//     transition: 2s; */
+//     /* A la animacion de margin se le baja el marge a : 44% */
+    
+//     /* Animacion 5 */
+    
+//     /* transform-origin: right;
+//     transform: scale(1.5, 1);
+//     transition: 2s;  */
+//     /* A la animacion de margin se le baja el marge a : 70%*/
+
+:root
+    --alto : 500px
+    --ancho : calc(var(--alto) - 110px)
+    --tiempo: 4s
+
+valores($fondo, $alto, $ancho, $columnaInit, $columnaFinal, $filaInit)
+    background: $fondo
+    height $alto
+    width: $ancho
+    grid-column: $columnaInit / $columnaFinal
+    grid-row $filaInit
+
+
+animacion($nombre, $cuanto)
+    .{$nombre}
+        animation-name: $nombre
+        animation-duration: var(--tiempo) 
+        animation-fill-mode: forwards
+        animation-delay: 1s
+
+    @keyframes $nombre
+        100%
+            margin-left: $cuanto
+
+agrandaRegresa($nombre ,$scale, $nomargin, $margin, $initial, $scaleRe) 
+    .{$nombre}  
+        transform-origin: $scaleRe
+        transform: scale($scale, 1)
+        transition: 4s
+        if $nomargin == "noMargin"
+            animation: $nombre 4s forwards !important
+
+    if $nomargin == "noMargin"
+        @keyframes $nombre
+            0%
+                margin-left: $margin
+
+            100%
+                margin-left: $initial
+
+margen($nombre, $initial)
+    #{$nombre}
+        animation: $nombre !important
+        animation-duration: var(--tiempo) !important  
+        animation-fill-mode: forwards !important
+
+    @keyframes $nombre 
+        0% 
+            margin-left: $initial
+        
+        100% 
+            margin-left: 0
+
+margen(REGRESO1, 60%)
+margen(REGRESO2, 40%)
+margen(REGRESO3, 50%)
+margen(REGRESO5, 90%)
+agrandaRegresa(regreso1, 1.6, "n", "noMargin", "s", right)
+agrandaRegresa(regreso2, 1.4, "noM", "n", "S", right)
+agrandaRegresa(regreso3, 1.5 , "noMargin", 331%, 50%, right)
+agrandaRegresa(regreso5, 1.9 , "noMargin", 431%, 90%, right)
+
+@keyframes aparece 
+    0%
+        opacity: 0
+
+    100%
+        opacity 1
+
+#REGRESO-4-6
+    animation: aparece var(--tiempo) forwards !important
+
+.caja 
+    display: grid
+    grid-template-columns: repeat(8, calc(var(--ancho) / 8))
+    grid-template-rows: repeat(9, calc(var(--alto) / 9.2))
+    width: 800px
+    height var(--alto)
+    overflow: hidden
+
+.par
+    &:nth-child(1)
+        valores(#337ab7, 100%, 100%, 1, 9, 1/1, none)
+
+
+    &:nth-child(2)
+        valores(#337ab7, 100%, 100%, 1, 9, 3)
+
+
+    &:nth-child(3)
+        valores(#337ab7, 100%, 100%, 1, 9, 5)
+
+    &:nth-child(4)
+        valores(#337ab7, 100%, 100%, 1, 4, 7)
+    
+    &:nth-child(5)
+        valores(#999, 100%, 100%, 5, 9, 7, no)
+
+    &:nth-child(6)
+        valores(#337ab7, 100%, 100%, 1, 4, 9)
+        
+    &:nth-child(7)
+        valores(#999, 100%, 100%, 5, 9, 9, no)
+
+
+
+
+
+
+animacion(animacion_1, 60%)
+animacion(animacion_2, 40%)
+animacion(animacion_5, 431%)
+animacion(animacion_3, 331%)
+.animacion-4-6
+    animation: oculto 1s forwards 1s !important
+
+@keyframes oculto 
+    100%
+        opacity: 0

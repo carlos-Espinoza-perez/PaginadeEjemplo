@@ -1,0 +1,28 @@
+colorPrimario = #337ab7
+colorSecundario = #999
+colorOscuro = #222222
+colorBeneficio = #337ab799
+colorClaro = white
+fontSize-md-c = 14px 
+fontSize-md-t = 17px 
+fontsize-small-t = 15px
+fontsize-small-c = medium
+
+info(imagen, alto)
+    height alto
+    background-image: imagen
+    background-size: 60% 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+BI($color, $donde)
+    &:{$donde}
+        content: ""
+        width: 100%
+        height 100%
+        position: absolute
+        z-index -1
+        background-color: $color
+        top: 0
+        left: 0

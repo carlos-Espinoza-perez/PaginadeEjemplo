@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="448.012" height="415.971" viewBox="0 0 448.012 415.971">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #337ab7;
+      }
+
+      .cls-2 {
+        fill: #2e8ddf;
+      }
+    </style>
+  </defs>
+  <g id="sendBi" transform="translate(226.001 -1249)">
+    <path id="Trazado_11" data-name="Trazado 11" class="cls-1" d="M438.731,209.463l-416-192a16.086,16.086,0,0,0-19.136,4.48,15.911,15.911,0,0,0-.384,19.648l136.8,182.4-136.8,182.4A15.993,15.993,0,0,0,22.7,430.519l416-192a16,16,0,0,0,.032-29.056Z" transform="translate(-226 1232.979)"/>
+    <path id="Sustracción_2" data-name="Sustracción 2" class="cls-2" d="M513,208.5H204.613l.4-.53-136.8-182.4A16.027,16.027,0,0,1,87.731,1.443l416,192a16,16,0,0,1,9.28,14.528c0,.176,0,.354-.009.529Z" transform="translate(-291 1249)"/>
+  </g>
+</svg>

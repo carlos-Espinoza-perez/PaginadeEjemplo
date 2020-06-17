@@ -1,0 +1,111 @@
+@media screen and (max-width: 768px)
+    .alto 
+        height 410px !important
+    
+    
+    .carusel-item
+        .beneficios
+            &__circle
+                width 85px
+                height 85px
+                margin: auto
+
+                img 
+                    height 55px
+                    width: 55px
+
+            &__txt
+                height 50%
+                width: 60%
+                margin-left: -50px
+
+                p
+                    transition: display 2s
+                    display: none
+                    will-change: display 
+
+
+    .beneficios--Contenedor--info
+        h3
+            font-size: fontSize-md-t
+        
+
+        .beneficios__circle
+            width 85px
+            height 85px
+
+            img    
+                width: 45px
+                height 45px
+                margin: auto
+
+        .beneficios__txt
+            h3
+                font-size: fontsize-small-t
+
+            p
+                font-size: fontsize-small-c                
+
+    .beneficios
+        &:nth-child(2)
+            .beneficios__circle
+                img
+                    width: 55px
+                    height 55px
+                    
+    .infoPlannerApp
+        &__cajas
+            &--descripcion
+                background-size: 80% 80%
+                height 50vh
+
+                p
+                    font-size: 13px;
+                    font-weight: bold;
+
+                &:before
+                    content: ""
+                    background-color: colorPrimario
+                    height 100%
+                    width: 100%
+                    position: absolute
+                    left: 0
+                    top: 0
+                    z-index -1
+            
+            &--masDescripcion
+                background-size: 80% 80%
+                background-color: colorClaro
+                height 50vh
+
+                &:before
+                    content: ""
+                    background-color: colorClaro
+                    height 100%
+                    width: 100%
+                    position: absolute
+                    left: 0
+                    top: 0
+                    z-index -1
+
+            &--footer
+                background-size: 80% 80%
+                background-color: colorPrimario
+                height 50vh
+                padding: 0
+
+                .infoPlannerApp__cajas
+                    margin: auto
+                
+                &:before
+                    content: ""
+                    background-color: colorPrimario
+                    height 100%
+                    width: 100%
+                    position: absolute
+                    left: 0
+                    top: 0
+                    z-index -1
+
+    div .lento
+        height 130px !important

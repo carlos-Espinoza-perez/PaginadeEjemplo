@@ -1,0 +1,62 @@
+-var navbar = ["Inicio", "Modulos", "Acerca de"]
+-var description = ["E-mail", "Telefono", "Faceboock"]
+
+//- mixin imgCarusel(images)
+//-     if si
+//-         .carusel-item.vista
+//-             img(src=images alt="" class=clla )
+
+//-     else 
+//-         .carusel-item
+//-             img(src=images alt="" class=clla )
+
+
+
+
+mixin BeneficiosTodos(inicio, carusel, medio, imagen, titulo, text, txt1)
+    if carusel == "esCarusel"
+            .carusel-item.h-100(class=inicio)
+                .beneficios.h-100
+                    .beneficios__circle
+                        img(src=imagen, alt="alt")
+                    .beneficios__txt.txt
+                        h3.tituloBeneficio #{titulo}
+                        p #{text}
+                        button.btn.btn-outline-primary(type="button") Leer Más 
+
+
+    else 
+        if medio == "esimgleft"
+            .beneficios.h-100.ultimo
+                .beneficios__txt
+                    h3.tituloBeneficio #{titulo}
+                    p #{text}
+                    p.txtAdd #{txt1}
+                    button.btn.btn-outline-primary(type="button") Leer Más 
+                .beneficios__circle
+                    img(src=imagen, alt="alt")
+
+        else 
+            .beneficios.h-100.ultimo
+                .beneficios__circle
+                    img(src=imagen, alt="alt")
+                .beneficios__txt
+                    h3.tituloBeneficio #{titulo}
+                    p #{text}
+                    p.txtAdd #{txt1}
+                    button.btn.btn-outline-primary(type="button") Leer Más 
+
+
+mixin lineaMedia(clases)
+    br 
+    hr(class=clases)
+    br
+
+mixin textFooter(imagen, titulo, etiqueta, txt)
+    .informacion__contenido
+        .informacion__contenido--img
+            img(src=imagen, alt="alt")
+        .informacion__contenido--text
+            h6.m-0
+                strong #{titulo}
+            #{etiqueta}(href="#") #{txt}

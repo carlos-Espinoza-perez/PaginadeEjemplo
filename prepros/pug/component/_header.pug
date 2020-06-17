@@ -1,0 +1,11 @@
+header
+    nav.container
+        ol
+            li
+                p(style="display: flex; justify-content: center; margin: 0;") Logo
+                //- img(src="../images/PlannerApp.png", alt="alt")
+        ol
+            each txt in navbar
+                li=txt
+        ol(style="display: none;")
+            img(src="../images/setup.svg", alt="alt")

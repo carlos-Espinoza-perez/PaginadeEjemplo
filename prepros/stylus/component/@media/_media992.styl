@@ -1,41 +1,43 @@
-.alto 
-    height 550px !important
-
 @media screen and (max-width 991px)
-    .alto
-        height 450px !important
-
     .lento
-        position relative !important
-        width 100% !important
-        height: 170px !important
-        background-color: colorPrimario
+        // position relative !important
+        width 200px !important
+        // height: 170px !important
+        // background-color: colorPrimario
+        // padding-bottom: 10px
 
+    main
+        height auto !important
 
-    .carusel2 
-        position relative
-    
-    .carusel-item .beneficios
-        display flex
-
-        // &__circle
-        //     width 30%
-
+    .carousel .beneficios
         &__txt
-            width 70%
+            p
+                text-align: left
+                font-size: 13px
+                width 83%
+                margin: 13px auto
 
             h3
-                font-size: fontSize-md-t
+                font-size: 16px
+    
+    // .carousel-item .beneficios
+    // //     display flex
 
-            p
-                font-size: fontSize-md-c
-                width 80%
-                margin: auto
-                text-align: center  
+    //     &__txt
+    //         // width 70%
+
+    //         h3
+    //             font-size: fontSize-md-t
+
+    //         p
+    //             font-size: fontSize-md-c
+    //             width 80%
+    //             margin: auto
+    //             text-align: center  
             
-            button 
-                font-size: fontSize-md-c
-                margin 20px auto
+    //         button 
+    //             font-size: fontSize-md-c
+    //             margin 20px auto
 
     .beneficios--Contenedor
         &--info
@@ -60,8 +62,8 @@
                     button 
                         font-size: fontSize-md-c
 
-                    .txtAdd
-                        display none
+                    // .txtAdd
+                    //     display none
                         
     .infoPlannerApp
         &__cajas--masDescripcion

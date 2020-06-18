@@ -1,94 +1,6 @@
-if (document.querySelector(".carusel")) {
-    var todos = document.querySelectorAll(".carusel-inner");
-    for (var i = 0; i < todos.length; i++) {
-        todos[i].click()
-    }
-}
-
-function init($padre) {
-    var contenedor = document.querySelector(`.${$padre}`);
-    var caja = contenedor.querySelector(".carusel-inner")
-    var tiempo = caja.getAttribute("time");
-    var cantidad = caja.getAttribute("cantidadImg");
-    var item = caja.querySelectorAll(".carusel-item")
-    cantidad = parseInt(cantidad)
-    tiempo = parseInt(tiempo);
-    var anadido;
-
-    (function addElement() {
-        // var newDiv = document.createElement("div");
-        var newDiv = document.createElement("section")
-        var newContent = document.createElement("img")
-        var contendido = newDiv.appendChild(newContent); //añade texto al div creado. 
-        var date = item[0].children[0].src
-        newContent.setAttribute("src", `${date}`)
-        newContent.setAttribute("alt", `Esta imagen viene de js si no sale es por q no tienes todos los elementos`)
-        newContent.classList.add("transparent")
-        // añade el elemento creado y su contenido al DOM 
-        var currentDiv = document.querySelector(".carusel-inner");
-        currentDiv.appendChild(contendido)
-    })()
-
-
-    // (function tam (url) {
-    //     // console.log(item[0].lastChild)
-    //     // var datoHaAnader = 
-    //     anadido = item[0].lastChild
-    //     anadido.classList.add("transparent")
-    //     anadido.classList.add("left")
-    // })()
-
-
-
-
-    var contador = 1; //Contador es el q entra
-    var salida; //Este es el q sale
-
-    setInterval(() => {
-        cambio(contador)
-    }, tiempo)
-
-    function cambio($contador) {
-        if ($contador < cantidad) {
-
-            contador = contador + 1;
-            salida = contador - 1
-
-            // valorCambio(contador, salida)
-            caja.querySelector(`.item-${contador}`).classList.add("get-in")
-            caja.querySelector(`.item-${salida}`).classList.add("go-out")
-
-            setTimeout(() => {
-                caja.querySelector(`.item-${contador}`).classList.remove("get-in")
-                caja.querySelector(`.item-${salida}`).classList.remove("go-out")
-
-                caja.querySelector(`.item-${salida}`).classList.remove("vista")
-                caja.querySelector(`.item-${contador}`).classList.add("vista")
-            }, 3000)
-            console.log(salida, contador)
-        } else {
-            // valorCambio()
-
-            contador = 1;
-            salida = cantidad
-
-
-            caja.querySelector(`.item-${contador}`).classList.add("get-in")
-            caja.querySelector(`.item-${salida}`).classList.add("go-out")
-            console.log(salida, contador)
-
-
-            setTimeout(() => {
-                caja.querySelector(`.item-${contador}`).classList.remove("get-in")
-                caja.querySelector(`.item-${salida}`).classList.remove("go-out")
-
-                caja.querySelector(`.item-${salida}`).classList.remove("vista")
-                caja.querySelector(`.item-${contador}`).classList.add("vista")
-            }, 3000)
-        }
-    }
-}
-
+$(".lento").carousel({
+    interval: 15000
+})
 
 var beneficiosContenedor = document.querySelectorAll(".ultimo")
 
@@ -99,7 +11,7 @@ var body = $("body")
 var tituloControl = document.querySelectorAll(".tituloBeneficio")
 var bodyWidthinit = body.innerWidth()
 
-if (bodyWidthinit > 992) {
+if (bodyWidthinit > 768) {
     tituloControl[1].innerHTML = "Control de <br> Acceseo"
 } else {
     tituloControl[1].innerHTML = "Control de Acceseo"
@@ -113,7 +25,7 @@ if (window.innerWidth < 500) {
 
 $(window).resize(function () {
     var bodyWidth = body.innerWidth()
-    if (bodyWidth > 992) {
+    if (bodyWidth > 768) {
         tituloControl[1].innerHTML = "Control de <br> Acceseo"
     } else {
         tituloControl[1].innerHTML = "Control de Acceseo"
@@ -180,14 +92,27 @@ $(".Comunicacion").click(() => {
     $(".cajas-opacity").addClass("opacity")
 })
 
-$(".cajas").click(() => {
-    $(document.body).removeClass("overflow-hidden")
-    $(".cajas").removeClass("modalIn")
-    $(".cajas").addClass("modalOut")
-    
-    setTimeout(() => {
-        $(".cajas").removeClass("modalOut")
-        $(".cajas").removeClass("d-flex")
-        $(".cajas-opacity").removeClass("opacity")
-    }, 900)
+var modalContador = 0;
+
+$(" a[href='#modal'] ").click(() => {
+    modalAdd()
 })
+
+$(".modalin").click(() => {
+    modalOut()
+})
+
+function modalAdd() {
+    $(" .modalin ").addClass("d-flex")
+    $(".modalTxt").addClass("modalIn")
+}
+
+function modalOut() {
+    $(".modalTxt").removeClass("modalIn")
+    $(".modalTxt").addClass("modalOut")
+
+    setTimeout(() => {
+        $(" .modalin ").removeClass("d-flex")
+        $(".modalTxt").removeClass("modalOut")
+    }, 600)
+}

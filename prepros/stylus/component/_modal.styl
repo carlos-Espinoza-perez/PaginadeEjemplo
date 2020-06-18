@@ -1,58 +1,51 @@
-strong
-  font-weight: 900
-
-.opacity
-    display inline-block !important
-    transition: .8s
-    background-color: rgba(00,00,00, .3)
-
-
-.cajas-opacity 
-  height 100vh
-  position: fixed
-  z-index 1
+.modalin
   top: 0
-  width: 100%
   display: none
 
-.cajas
-    z-index 2
+  &:before
+    content: ""
+    height 100%
     width: 100%
-    height 100vh
-    display: flex
-    justify-content: center
-    position fixed
-    top: 0
-    display: none
-    
+    opacity .6
+    background-color: #222
+    position absolute
 
-.pregunta
-    margin: auto;
-    width: 300px;
-    height: 175px;
-    align-items: center;
-    text-align: center;
-    padding: 1px;
+  .modalTxt
+    border: 1px solid #fff;
+    padding: 30px;
     border-radius: 10px;
-    border: 1px solid colorClaro;
-    color: colorClaro
+    transform: translateX(-3000%)
 
-    .text
-        margin: 30px auto;
-        width: 129px;
+    a
+      background: #25d366 !important
+      color: white
+
 
     .btn
-        margin: 12px;
+      border: none
 
-        &:active
-            transform: scale(0.5)
-            transition: 1s
+      &-primary:focus 
+        box-shadow: none !important
+
+      &:focus
+        box-shadow: none !important
+        
+
+    h3 
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 13px;
+    
+    a
+      margin: 0 10px
+
+
 
 .modalIn
-    animation: modalIn .8s forwards
+    animation: modalIn .6s forwards
 
 .modalOut
-    animation: modalOut .8s forwards
+    animation: modalOut .6s forwards
 
 @keyframes modalOut 
       0% 

@@ -1,7 +1,4 @@
 @media screen and (max-width 575px)
-    .alto
-        height 340px !important
-
     header
         nav
             ol:nth-child(2)
@@ -13,7 +10,28 @@
                     width: 30px;
                     margin-right: 10px;
                     cursor pointer
+
+    .carousel
+        .beneficios
+            &__txt
+                p
+                    width: 80%
                     
+                button
+                    font-size: 13px
+
+    .txtAdd
+        display none !important
+
+        & + button
+            display: block !important
+            font-size: 13px
+
+
+    .ultimo
+        .beneficios
+            &__txt
+                margin-left: 10px
 
     .infoPlannerApp__cajas
         &--descripcion  

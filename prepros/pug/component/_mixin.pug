@@ -1,21 +1,9 @@
 -var navbar = ["Inicio", "Modulos", "Acerca de"]
 -var description = ["E-mail", "Telefono", "Faceboock"]
 
-//- mixin imgCarusel(images)
-//-     if si
-//-         .carusel-item.vista
-//-             img(src=images alt="" class=clla )
-
-//-     else 
-//-         .carusel-item
-//-             img(src=images alt="" class=clla )
-
-
-
-
 mixin BeneficiosTodos(inicio, carusel, medio, imagen, titulo, text, txt1)
     if carusel == "esCarusel"
-            .carusel-item.h-100(class=inicio)
+            .carousel-item.h-100(class=inicio)
                 .beneficios.h-100
                     .beneficios__circle
                         img(src=imagen, alt="alt")
@@ -31,7 +19,7 @@ mixin BeneficiosTodos(inicio, carusel, medio, imagen, titulo, text, txt1)
                 .beneficios__txt
                     h3.tituloBeneficio #{titulo}
                     p #{text}
-                    p.txtAdd #{txt1}
+                    p.txtAdd.d-block.text-justify #{txt1}
                     button.btn.btn-outline-primary(type="button") Leer Más 
                 .beneficios__circle
                     img(src=imagen, alt="alt")
@@ -43,7 +31,7 @@ mixin BeneficiosTodos(inicio, carusel, medio, imagen, titulo, text, txt1)
                 .beneficios__txt
                     h3.tituloBeneficio #{titulo}
                     p #{text}
-                    p.txtAdd #{txt1}
+                    p.txtAdd.d-block.text-justify #{txt1}
                     button.btn.btn-outline-primary(type="button") Leer Más 
 
 
@@ -52,11 +40,15 @@ mixin lineaMedia(clases)
     hr(class=clases)
     br
 
-mixin textFooter(imagen, titulo, etiqueta, txt)
+mixin textFooter(imagen, titulo, etiqueta, txt, $href, $target)
     .informacion__contenido
         .informacion__contenido--img
             img(src=imagen, alt="alt")
         .informacion__contenido--text
             h6.m-0
                 strong #{titulo}
-            #{etiqueta}(href="#") #{txt}
+            #{etiqueta}(href=`${$href}` target=`${$target}`) #{txt}
+
+mixin caruselItem(active, n) 
+    div(class=`carousel-item ${active}`)
+        img(src=`../images/img${n}.png`, alt="alt").w-100.d-block

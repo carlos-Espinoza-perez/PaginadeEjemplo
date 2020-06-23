@@ -1,13 +1,37 @@
-@media (prefers-reduced-motion: reduce) {
-  .carousel-item {
-    transition:  .8s;
-  }
-}
-@import "component/_Funciones.styl"
-/*Aqui inicia el codigo de modificacion de container*/
 .container 
     max-width 1080px    
 
+html
+      scroll-behavior: smooth
+
+@import "component/_Funciones.styl"
+
+/*Codigo de modal q sale arriba del carrusel*/
+.vistaTxt 
+    width: 100%
+    height 100%
+    background-color: colorBeneficio
+    position: absolute
+    z-index 2
+    top: 0
+    opacity 0
+    animation: fadeIn 1s forwards
+    color: white
+    text-align: center
+
+    h3 
+        margin: 23px auto
+
+    p 
+        width 60%
+        margin: 10px auto
+
+    img
+        width: 21px;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor pointer
 
 
 /*Aqui inicia el codigo de el header*/    
@@ -31,3 +55,18 @@
 /*Aqui inicia el codigo de el el media de 425px*/    
 @import "component/@media/_media425.styl"
 @import "component/_modal.styl"
+
+@keyframes fadeIn
+    0% 
+        opacity 0
+    
+    100% 
+        opacity 100%
+.beneficios--Contenedor
+    @media screen and (min-width 575px)
+        a
+            display none!important
+
+
+// .carousel-item 
+    // display: flex

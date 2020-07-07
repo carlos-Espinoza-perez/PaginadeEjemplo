@@ -38,7 +38,7 @@ function INITFINAL() {
     }, tiempo)
 }
 
-function REPARTIDO () {
+function REPARTIDO() {
     setTimeout(() => {
         for (var i = 0; i < pares.length; i++) {
             pares[i].classList.remove(`regreso${i}`)

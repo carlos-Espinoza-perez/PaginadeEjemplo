@@ -1,3 +1,63 @@
+// Codigo del logo
+var Menupar = document.querySelectorAll(".logo .par");
+var tiempo = 9000
+
+window.addEventListener("load", INIT())
+
+function INIT() {
+    setTimeout(() => {
+        for (var i = 0; i < Menupar.length; i++) {
+            if (i != 4 & i != 6) {
+                Menupar[i].classList.add(`animacion_${i}`)
+            } else {
+                Menupar[i].classList.add(`animacion-4-6`)
+            }
+        }
+        INITINTERMEDIO()
+    }, tiempo)
+}
+
+function INITINTERMEDIO() {
+    setTimeout(() => {
+        for (var n = 0; n < Menupar.length; n++) {
+            Menupar[n].classList.add(`regreso${n}`)
+        }
+        INITFINAL()
+    }, tiempo);
+}
+
+function INITFINAL() {
+    setTimeout(() => {
+        for (var n = 0; n < Menupar.length; n++) {
+            if (n != 4 & n != 6) {
+                Menupar[n].setAttribute("id", `REGRESO${n}`)
+            } else {
+                Menupar[n].setAttribute("id", "REGRESO-4-6")
+            }
+        }
+        REPARTIDO()
+    }, tiempo)
+}
+
+function REPARTIDO() {
+    setTimeout(() => {
+        for (var i = 0; i < Menupar.length; i++) {
+            Menupar[i].classList.remove(`regreso${i}`)
+            Menupar[i].classList.remove(`animacion_${i}`)
+
+            Menupar[i].setAttribute("id", "none")
+        }
+    }, tiempo)
+    INIT()
+}
+
+
+
+
+
+
+
+
 $(".lento").carousel({
     interval: 15000
 })
@@ -23,7 +83,7 @@ if (window.innerWidth > 768) {
     tituloControl[0].innerHTML = "Planificación de proyectos"
 }
 
-$(window).resize(function () {
+$(window).resize(function() {
     var bodyWidth = body.innerWidth()
     if (bodyWidth > 768) {
         tituloControl[1].innerHTML = "Control de <br> Acceseo"
@@ -41,13 +101,13 @@ $(window).resize(function () {
 
 
 // Midiendo el scroll para degradado de los beneficios
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         var barra = $(window).scrollTop();
         var posicion = (barra * 0.3);
 
-        document.querySelector(".beneficios--Contenedor--info").style.background = `-webkit-linear-gradient(-${posicion}deg, rgba(51,122,183,1) 45%, transparent 100%)70%`
+        document.querySelector(".beneficios--Contenedor--info").style.background = `linear-gradient(-${posicion}deg, rgba(51,122,183,1) 45%, transparent 100%)70%`
 
     });
 
@@ -136,107 +196,32 @@ var CaruselBeneficios = document.querySelectorAll(".carousel-inner .beneficios")
 function backgroudnBeneficios() {
     var datos = document.querySelectorAll(".carousel-inner .beneficios")
     for (var i = 0; i < datos.length; i++) {
-        datos[i].classList.add(`animacion_${i}`)
+        datos[i].classList.add(`fondoBeneficios_${i}`)
     }
-    // return CaruselBeneficios = datos
 }
 
-// Asiendo El btn Leer Mas
-window.addEventListener("load", () => {
-    var btn = document.querySelectorAll(`a[href="#Carusel"]`);
-    var hijobtn = document.querySelectorAll(".beneficios")
-    // var idBeneficios = ["Planificacion"]
+// Header opacity
 
-    if (document.body.clientWidth > 578) {
-        for (var i = 0; i < btn.length; i++) {
-            if (i < 3) {
-                btn[i].setAttribute("href", `#Planificacion`)
-            }
-        }
-    }
+$(window).scroll(() => {
+    var barra = $(window).scrollTop();
+    console.log(barra)
 
-    // Texto a poner
-    // var tittle;
-    // var p_1;
-    // var p_2;
-    if (document.body.clientWidth <= 578) {
-        var contenedor;
-        var contenido = ["", "", ""]
-        var etiquetas = ["", "", ""]
-
-        function ClickBtn(num) {
-            btn[num].addEventListener("click", () => {
-                // alert(num)
-                quitarBeneficios()
-                AtribuirElement(num)
-                window.scrollTo(0, 0)
-                $("body").addClass("modal-open")
-            })
-        }
-
-        function AtribuirElement(num) {
-            var title = document.createElement("h3")
-            var p_1 = document.createElement("p")
-            var p_2 = document.createElement("p")
-            var img = document.createElement("img")
-            var Container = document.createElement("div")
-            var ciclo = [title, p_1, p_2, img]
-
-            // console.log(hijobtn[num])
-            extraerDatos(num)
-            
-            $("#CaruselPadre").append(Container)
-            $(Container).addClass("vistaTxt")
-            contenedor = Container
-            
-            for (var i = 0; i < ciclo.length; i++) {
-                $(contenedor).append(ciclo[i])
-            }
-            
-            for (var i = 0; i < contenido.length; i++) {
-                $(ciclo[i]).append(contenido[i])
-            }
-
-            img.setAttribute("src", "../images/Close.svg")
-        
-            $(img).click(() => {
-                // alert("")
-                $(contenedor).remove()
-                aparecer()
-            })
-        }
-        
-        function extraerDatos(num) {
-            // debugger
-            var numero;
-
-            if (num === 4) {
-                numero = 0;
-            } else {
-                numero = 1;
-            }
-
-            var h3 = hijobtn[num].children[numero].children[0]
-            var p1 = hijobtn[num].children[numero].children[1]
-            var p2 = hijobtn[num].children[numero].children[2]
-            contenido[0] = h3.innerText
-            contenido[1] = p1.innerText
-            contenido[2] = p2.innerText
-        }
-
-        function quitarBeneficios() {
-            $(".carousel .beneficios").addClass("d-none")
-        }
-
-        for (var i = 0; i < btn.length; i++) {
-            ClickBtn(i)
-        }
-
-        function aparecer() {
-            for (var i = 0; i < 3; i++) {
-                $(hijobtn[i]).removeClass("d-none")
-                $(document.body).removeClass("modal-open")
-            }
-        }
+    if (barra >= 50) {
+        $("header").css({
+            "background": "linear-gradient(to right, #22222270, rgba(51, 122, 183, .7)"
+        })
+    } else {
+        $("header").css({
+            "background": "linear-gradient(to right, #222, #337ab7"
+        })
     }
 })
+
+function Description() {
+    var description = $(".imgDescription")
+    if ($("body").width() < 410) {
+        console.log(description)
+    }
+}
+
+Description()

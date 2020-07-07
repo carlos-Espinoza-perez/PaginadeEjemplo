@@ -1,6 +1,8 @@
+colorNew = #6eff00
+
 header 
-    height 50px
-    background: linear-gradient(to right, colorPrimario, colorOscuro)
+    height 60px
+    background: linear-gradient(to right, colorOscuro, colorPrimario)
     position: fixed
     z-index 5
     width 100%
@@ -9,8 +11,9 @@ header
     .menu
         display: none
 
+
     nav 
-        height 50px
+        height 100%
         display: flex
         justify-content: space-between
         align-items: center
@@ -20,10 +23,14 @@ header
             padding-left: 13px
             margin: 0
             
-            li
-                list-style: none 
+            a
                 margin-left: 20px 
                 color: colorClaro
+                font-size: 14px
+
+                &:hover
+                    text-decoration: none
+                    color: #222
 
                 &:nth-child(1)
                     margin-left: 0

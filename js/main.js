@@ -1,3 +1,63 @@
+// Codigo del logo
+var Menupar = document.querySelectorAll(".logo .par");
+var tiempo = 9000
+
+window.addEventListener("load", INIT())
+
+function INIT() {
+    setTimeout(() => {
+        for (var i = 0; i < Menupar.length; i++) {
+            if (i != 4 & i != 6) {
+                Menupar[i].classList.add(`animacion_${i}`)
+            } else {
+                Menupar[i].classList.add(`animacion-4-6`)
+            }
+        }
+        INITINTERMEDIO()
+    }, tiempo)
+}
+
+function INITINTERMEDIO() {
+    setTimeout(() => {
+        for (var n = 0; n < Menupar.length; n++) {
+            Menupar[n].classList.add(`regreso${n}`)
+        }
+        INITFINAL()
+    }, tiempo);
+}
+
+function INITFINAL() {
+    setTimeout(() => {
+        for (var n = 0; n < Menupar.length; n++) {
+            if (n != 4 & n != 6) {
+                Menupar[n].setAttribute("id", `REGRESO${n}`)
+            } else {
+                Menupar[n].setAttribute("id", "REGRESO-4-6")
+            }
+        }
+        REPARTIDO()
+    }, tiempo)
+}
+
+function REPARTIDO() {
+    setTimeout(() => {
+        for (var i = 0; i < Menupar.length; i++) {
+            Menupar[i].classList.remove(`regreso${i}`)
+            Menupar[i].classList.remove(`animacion_${i}`)
+
+            Menupar[i].setAttribute("id", "none")
+        }
+    }, tiempo)
+    INIT()
+}
+
+
+
+
+
+
+
+
 $(".lento").carousel({
     interval: 15000
 })
@@ -17,13 +77,13 @@ if (bodyWidthinit > 768) {
     tituloControl[1].innerHTML = "Control de Acceseo"
 }
 
-if (window.innerWidth < 500) {
+if (window.innerWidth > 768) {
     tituloControl[0].innerHTML = "Planificación de <br> proyectos"
 } else {
     tituloControl[0].innerHTML = "Planificación de proyectos"
 }
 
-$(window).resize(function () {
+$(window).resize(function() {
     var bodyWidth = body.innerWidth()
     if (bodyWidth > 768) {
         tituloControl[1].innerHTML = "Control de <br> Acceseo"
@@ -41,13 +101,13 @@ $(window).resize(function () {
 
 
 // Midiendo el scroll para degradado de los beneficios
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         var barra = $(window).scrollTop();
         var posicion = (barra * 0.3);
 
-        document.querySelector(".beneficios--Contenedor--info").style.background = `-webkit-linear-gradient(-${posicion}deg, rgba(51,122,183,1) 45%, transparent 100%)70%`
+        document.querySelector(".beneficios--Contenedor--info").style.background = `linear-gradient(-${posicion}deg, rgba(51,122,183,1) 45%, transparent 100%)70%`
 
     });
 
@@ -77,7 +137,7 @@ $(window).ready(() => {
             }
         }
         // var barra = barra * 0.01
-        console.log(barra)
+        // console.log(barra)
     })
 })
 
@@ -105,6 +165,7 @@ $(".modalin").click(() => {
 function modalAdd() {
     $(" .modalin ").addClass("d-flex")
     $(".modalTxt").addClass("modalIn")
+    $(document.body).addClass("modal-open")
 }
 
 function modalOut() {
@@ -112,7 +173,55 @@ function modalOut() {
     $(".modalTxt").addClass("modalOut")
 
     setTimeout(() => {
+        $(document.body).removeClass("modal-open")
         $(" .modalin ").removeClass("d-flex")
         $(".modalTxt").removeClass("modalOut")
     }, 600)
 }
+
+
+// Poniendole animacion Al carusel de beneficios
+
+if (document.body.clientWidth <= 768) {
+    backgroudnBeneficios()
+}
+
+$(window).resize(() => {
+    if (document.body.clientWidth <= 768) {
+        backgroudnBeneficios()
+    }
+})
+var CaruselBeneficios = document.querySelectorAll(".carousel-inner .beneficios");
+
+function backgroudnBeneficios() {
+    var datos = document.querySelectorAll(".carousel-inner .beneficios")
+    for (var i = 0; i < datos.length; i++) {
+        datos[i].classList.add(`fondoBeneficios_${i}`)
+    }
+}
+
+// Header opacity
+
+$(window).scroll(() => {
+    var barra = $(window).scrollTop();
+    console.log(barra)
+
+    if (barra >= 50) {
+        $("header").css({
+            "background": "linear-gradient(to right, #22222270, rgba(51, 122, 183, .7)"
+        })
+    } else {
+        $("header").css({
+            "background": "linear-gradient(to right, #222, #337ab7"
+        })
+    }
+})
+
+function Description() {
+    var description = $(".imgDescription")
+    if ($("body").width() < 410) {
+        console.log(description)
+    }
+}
+
+Description()

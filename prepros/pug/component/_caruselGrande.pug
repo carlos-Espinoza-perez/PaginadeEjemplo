@@ -1,11 +1,11 @@
-main.container.carousel.position-relative(style="height: 550px; margin-top: 50px;")
-    .carousel.slide(data-ride="carousel" data-touch="false" data-pause="false")
+main.container.carousel.position-relative(style="height: 520px; margin-top: 50px;")
+    .carousel.slide.h-100(data-ride="carousel" data-touch="false" data-pause="false")#CaruselPadre
         .carousel-inner
             each c in [1,2,3,4,5,6,7,8,9]
                 if c == 1
-                    +caruselItem("active", c) 
+                    +caruselItem("active", `https://picsum.photos/1080/600?random=${c}`) 
                 else
-                    +caruselItem("", c) 
+                    +caruselItem("", `https://picsum.photos/1080/600?random=${c}`) 
 
                    
     include _CaruselBeneficios.pug

@@ -1,162 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>PlannerApp - PlannerApp</title>
+    <title>Pagina de Ejemplo</title>
     <link rel="stylesheet" href="../css/Boostrapt.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <meta name="theme-color" content="#222">
     <link rel="shortcut icon" href="../images/PlannerApp.png" type="image/x-icon" width="20">
-  </head>
-  <body>
-    <header class="shadow">
-      <nav class="container">
-        <ol>
-          <li>
-            <p style="display: flex; justify-content: center; margin: 0;">Logo</p>
-          </li>
-        </ol>
-        <ol>
-          <li>Inicio</li>
-          <li>Modulos</li>
-          <li>Acerca de</li>
-        </ol>
-        <ol style="display: none;"><img src="../images/setup.svg" alt="alt"></ol>
-      </nav>
+</head>
+
+<body>
+    <header class="shadow-lg">
+        <nav class="container">
+            <ol>
+                <div class="logo">
+                    <div class="par"></div>
+                    <div class="par"></div>
+                    <div class="par"></div>
+                    <div class="par"></div>
+                    <div class="par"></div>
+                    <div class="par"></div>
+                    <div class="par"></div>
+                </div>
+            </ol>
+            <ol>
+                <a href="#Inicio">Inicio</a>
+                <a href="#Planificacion">Modulos</a>
+                <a href="#acercaDe">Acerca de</a>
+                <a href="#contacto">Contactanos</a>
+            </ol>
+            <ol style="display: none;"><img src="../images/setup.svg" alt="alt"></ol>
+        </nav>
     </header>
-    <main class="container carousel position-relative" style="height: 550px; margin-top: 50px;">
-      <div class="carousel slide" data-ride="carousel" data-touch="false" data-pause="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active"><img class="w-100 d-block" src="../images/img1.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img2.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img3.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img4.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img5.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img6.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img7.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img8.png" alt="alt"/></div>
-          <div class="carousel-item "><img class="w-100 d-block" src="../images/img9.png" alt="alt"/></div>
+    <main class="container carousel position-relative" style="height: 520px; margin-top: 50px;" id="Inicio">
+        <div class="carousel slide h-100" data-ride="carousel" data-touch="false" data-pause="false" id="CaruselPadre">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=1" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=2" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=3" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=4" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=5" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=6" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=7" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=8" alt="alt" />
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100 d-block" src="https://picsum.photos/1080/600?random=9" alt="alt" />
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="lento slide carousel position-absolute h-100" style="top: 0; width: 20%" data-touch="false" data-pause="false" data-ride="carousel">
-        <div class="carousel-inner h-100">
-          <div class="carousel-item h-100 active carousel-item">
-            <div class="beneficios h-100">
-              <div class="beneficios__circle"><img src="../images/Proyectos_PlannerApp.svg" alt="alt"/></div>
-              <div class="beneficios__txt txt">
-                <h3 class="tituloBeneficio">Planificación de proyectos</h3>
-                <p>Aprovecha la colaboración de tu equipo para planificar y dar seguimiento a todas las tareas del proyecto.</p>
-                <button class="btn btn-outline-primary" type="button">Leer Más </button>
-              </div>
+        <div class="lento slide carousel position-absolute h-100" style="top: 0; width: 20%" data-touch="false"
+            data-pause="false" data-ride="carousel">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item h-100 active carousel-item">
+                    <div class="beneficios h-100">
+                        <div class="beneficios__circle"><img src="../images/Proyectos_PlannerApp.svg" alt="alt" /></div>
+                        <div class="beneficios__txt txt">
+                            <h3 class="tituloBeneficio">Planificación de proyectos</h3>
+                            <p>Aprovecha la colaboración de tu equipo para planificar y dar seguimiento a todas las
+                                tareas del proyecto.
+                            </p>
+                            <p class="d-none">También puedes tener a disposición toda la documentación necesaria para la
+                                fluidez del proyecto.
+                            </p>
+                            <div class="w-100 d-flex justify-conten-center"><a class="btn btn-outline-primary"
+                                    href="#Planificacion" type="button">Leer Más </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100 carousel-item">
+                    <div class="beneficios h-100">
+                        <div class="beneficios__circle"><img src="../images/ControlAcceso_PlannerApp.svg" alt="alt" />
+                        </div>
+                        <div class="beneficios__txt txt">
+                            <h3 class="tituloBeneficio">Control de Acceso</h3>
+                            <p>Realiza los registros de ingreso del personal en proyectos o en oficinas.</p>
+                            <p class="d-none">Los registros pueden ser usados para calculo de nomina y para llevar el
+                                control de consumo de tiempo del proyecto</p>
+                            <div class="w-100 d-flex justify-conten-center"><a class="btn btn-outline-primary"
+                                    href="#Planificacion" type="button">Leer Más </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item h-100 carousel-item">
+                    <div class="beneficios h-100">
+                        <div class="beneficios__circle"><img src="../images/RRHH_PlannerApp.svg" alt="alt" /></div>
+                        <div class="beneficios__txt txt">
+                            <h3 class="tituloBeneficio">Recursos Humanos</h3>
+                            <p>Administra el personal y asígnalo a las áreas de trabajo (Proyectos u oficina).</p>
+                            <p class="d-none">Crea una bitácora con sus acciones de personal para historial de la
+                                carrera desarrollada en la compañía.</p>
+                            <div class="w-100 d-flex justify-conten-center"><a class="btn btn-outline-primary"
+                                    href="#Planificacion" type="button">Leer Más </a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item h-100 carousel-item">
-            <div class="beneficios h-100">
-              <div class="beneficios__circle"><img src="../images/ControlAcceso_PlannerApp.svg" alt="alt"/></div>
-              <div class="beneficios__txt txt">
-                <h3 class="tituloBeneficio">Control de Acceso</h3>
-                <p>Realiza los registros de ingreso del personal en proyectos o en oficinas.</p>
-                <button class="btn btn-outline-primary" type="button">Leer Más </button>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item h-100 carousel-item">
-            <div class="beneficios h-100">
-              <div class="beneficios__circle"><img src="../images/RRHH_PlannerApp.svg" alt="alt"/></div>
-              <div class="beneficios__txt txt">
-                <h3 class="tituloBeneficio">Recursos Humanos</h3>
-                <p>Administra el personal y asígnalo a las áreas de trabajo (Proyectos u oficina).</p>
-                <button class="btn btn-outline-primary" type="button">Leer Más </button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </main>
+
+
     <div class="container">
-      <div class="beneficios--Contenedor position-relative">
-        <div class="beneficios--Contenedor--info pt-3 pb-3">
-          <h3>Modulos Disponible</h3>
-          <div class="beneficios h-100 ultimo">
-            <div class="beneficios__circle"><img src="../images/Proyectos_PlannerApp.svg" alt="alt"/></div>
-            <div class="beneficios__txt">
-              <h3 class="tituloBeneficio">Planificación de proyectos</h3>
-              <p>Aprovecha la colaboración de tu equipo para planificar y dar seguimiento a todas las tareas del proyecto.</p>
-              <p class="txtAdd d-block text-justify">También puedes tener a disposición toda la documentación necesaria para la fluidez del proyecto.</p>
-              <button class="btn btn-outline-primary" type="button">Leer Más </button>
+        <div class="beneficios--Contenedor position-relative">
+            <div class="beneficios--Contenedor--info pt-3 pb-3" id="Planificacion">
+                <h3>Modulos Disponible</h3>
+                <div class="beneficios h-100 ultimo">
+                    <div class="beneficios__circle"><img src="../images/Proyectos_PlannerApp.svg" alt="alt" /></div>
+                    <div class="beneficios__txt">
+                        <h3 class="tituloBeneficio medium">Planificación de proyectos</h3>
+                        <p>Aprovecha la colaboración de tu equipo para planificar y dar seguimiento a todas las tareas
+                            del proyecto.
+                        </p>
+                        <p class="txtAdd d-block text-justify">También puedes tener a disposición toda la documentación
+                            necesaria para la fluidez del proyecto.</p>
+                        <div class="w-100 d-flex justify-conten-center"><a class="btn btn-outline-primary"
+                                type="button">Leer Más
+                            </a></div>
+                    </div>
+                </div><br />
+                <hr /><br />
+                <div class="beneficios h-100 ultimo">
+                    <div class="beneficios__txt">
+                        <h3 class="tituloBeneficio">Control de Acceso</h3>
+                        <p>Realiza los registros de ingreso del personal en proyectos o en oficinas.</p>
+                        <p class="txtAdd d-block text-justify">Los registros pueden ser usados para calculo de nomina y
+                            para llevar el control de consumo de tiempo del proyecto</p>
+                        <div class="w-100 d-flex justify-conten-center"><a class="btn btn-outline-primary"
+                                type="button">Leer Más
+                            </a></div>
+                    </div>
+                    <div class="beneficios__circle"><img src="../images/ControlAcceso_PlannerApp.svg" alt="alt" /></div>
+                </div><br />
+                <hr /><br />
+                <div class="beneficios h-100 ultimo">
+                    <div class="beneficios__circle"><img src="../images/RRHH_PlannerApp.svg" alt="alt" /></div>
+                    <div class="beneficios__txt">
+                        <h3 class="tituloBeneficio">Recursos Humanos</h3>
+                        <p>Administra el personal y asígnalo a las áreas de trabajo (Proyectos u oficina).</p>
+                        <p class="txtAdd d-block text-justify">Crea una bitácora con sus acciones de personal para
+                            historial de la carrera desarrollada en la compañía.</p>
+                        <div class="w-100 d-flex justify-conten-center"><a class="btn btn-outline-primary"
+                                type="button">Leer Más
+                            </a></div>
+                    </div>
+                </div>
             </div>
-          </div><br/>
-          <hr/><br/>
-          <div class="beneficios h-100 ultimo">
-            <div class="beneficios__txt">
-              <h3 class="tituloBeneficio">Control de  Acceso</h3>
-              <p>Realiza los registros de ingreso del personal en proyectos o en oficinas.</p>
-              <p class="txtAdd d-block text-justify">Los registros pueden ser usados para calculo de nomina y para llevar el control de consumo de tiempo del proyecto</p>
-              <button class="btn btn-outline-primary" type="button">Leer Más </button>
-            </div>
-            <div class="beneficios__circle"><img src="../images/ControlAcceso_PlannerApp.svg" alt="alt"/></div>
-          </div><br/>
-          <hr/><br/>
-          <div class="beneficios h-100 ultimo">
-            <div class="beneficios__circle"><img src="../images/RRHH_PlannerApp.svg" alt="alt"/></div>
-            <div class="beneficios__txt">
-              <h3 class="tituloBeneficio">Recursos Humanos</h3>
-              <p>Administra el personal y asígnalo a las áreas de trabajo (Proyectos u oficina).</p>
-              <p class="txtAdd d-block text-justify">Crea una bitácora con sus acciones de personal para historial de la carrera desarrollada en la compañía.</p>
-              <button class="btn btn-outline-primary" type="button">Leer Más </button>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
     <div class="infoPlannerApp position-relative container">
-      <div class="fondoParallax infoPlannerApp__cajas--descripcion position-relative">
-        <p>
-            Es el software desarrollado para la administración de proyectos y recursos humanos para empresas dedicadas a construcción.
-          Con PlannerApp 360 podras integrar toda la organización para poder tener beneficios que agregan valor como:
-        </p>
-      </div>
-      <div class="fondoParallax infoPlannerApp__cajas--masDescripcion position-relative">
-        <div class="text-descripcion">
-          <li> <img src="../images/sendBi.svg" alt="alt" width="16" style="margin-right: 10px;">Personalización segun las necesidades</li>
-          <li> <img src="../images/sendBi.svg" alt="alt" width="16" style="margin-right: 10px;">Colaboración entre las areas de la organización</li>
-          <li> <img src="../images/sendBi.svg" alt="alt" width="16" style="margin-right: 10px;">Movilidad para usar en dispositivos conectados a internet</li>
-          <li> <img src="../images/sendBi.svg" alt="alt" width="16" style="margin-right: 10px;">Datos para realizar inteligencia de negocio</li>
+       <div class="fondoParallax infoPlannerApp__cajas--descripcion position-relative" id="acercaDe">
+            <p class="desaparece">
+                Es el software desarrollado para la administración de proyectos y recursos humanos para empresas
+                dedicadas a construcción. Con PlannerApp 360 podras integrar toda la organización para poder tener
+                beneficios que agregan valor como:
+            </p>
+            <p class="aparecer" style="text-align: left !important;">
+                PlannerApp 360 es un software dedicado para la administración de proyectos y recursos humanos dedicadas
+                a la construcción
+            </p>
         </div>
-      </div>
-      <div class="fondoParallax infoPlannerApp__cajas--footer position-relative">
-        <div class="infoPlannerApp__cajas">
-          <div class="informacion__contenido">
-            <div class="informacion__contenido--img"><img src="../images/emailWhite.svg" alt="alt"/></div>
-            <div class="informacion__contenido--text">
-              <h6 class="m-0"><strong>E-Mail</strong></h6>
-              <a href="http://plannerapp.net/2019/08/03/administracion-de-proyectos-de-construccion-vs-proyectos-tecnologicos/#respond" target="_blanck">info@plannerapp.net</a>
+        <div class="fondoParallax infoPlannerApp__cajas--masDescripcion position-relative">
+            <div class="text-descripcion">
+                <li>
+                    <img src="../images/sendBi.svg" alt="ImgDescricion" class="imgDescription">
+                    Personalización segun las necesidades
+                </li>
+                <li class="desaparece">
+                    <img src="../images/sendBi.svg" alt="ImgDescricion" class="imgDescription">
+                    Colaboración entre las areas de la organización
+                </li>
+                <li class="aparecer" style="display: none;">
+                    <img src="../images/sendBi.svg" alt="ImgDescricion" class="imgDescription">
+                    Aportacion entre las areas de la organización
+                </li>
+                <li class="desaparece">
+                    <img src="../images/sendBi.svg" alt="ImgDescricion" class="imgDescription">
+                    Movilidad para usar en dispositivos conectados a internet
+                </li>
+                <li style="display: none;" class="aparecer">
+                    <img src="../images/sendBi.svg" alt="ImgDescricion" class="imgDescription">
+                    Usalo con cualquier dispositivo en Internet
+                </li>
+                <li>
+                    <img src="../images/sendBi.svg" alt="ImgDescricion" class="imgDescription">
+                    Datos para realizar inteligencia de negocio
+                </li>
             </div>
-          </div>
-          <div class="informacion__contenido">
-            <div class="informacion__contenido--img"><img src="../images/answer.svg" alt="alt"/></div>
-            <div class="informacion__contenido--text">
-              <h6 class="m-0"><strong>Telefono</strong></h6>
-              <a href="#modal" target="">(506) 7041 2463</a>
-            </div>
-          </div>
-          <div class="informacion__contenido">
-            <div class="informacion__contenido--img"><img src="../images/faceboockCircle.svg" alt="alt"/></div>
-            <div class="informacion__contenido--text">
-              <h6 class="m-0"><strong>Faceboock</strong></h6>
-              <a href="" target="_blanck">PlannerApp 360</a>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="fondoParallax infoPlannerApp__cajas--footer position-relative" id="contacto">
+            <div class="infoPlannerApp__cajas">
+                <div class="informacion__contenido">
+                    <div class="informacion__contenido--img"><img src="../images/emailWhite.svg" alt="alt" /></div>
+                    <div class="informacion__contenido--text">
+                        <h6 class="m-0"><strong>E-Mail</strong></h6>
+                        <a href="http://plannerapp.net/2019/08/03/administracion-de-proyectos-de-construccion-vs-proyectos-tecnologicos/#respond"
+                            target="_blanck">info@plannerapp.net</a>
+                    </div>
+                </div>
+                <div class="informacion__contenido">
+                    <div class="informacion__contenido--img"><img src="../images/answer.svg" alt="alt" /></div>
+                    <div class="informacion__contenido--text">
+                        <h6 class="m-0"><strong>Telefono</strong></h6>
+                        <a href="#modal" target="">(506) 7041 2463</a>
+                    </div>
+                </div>
+                <div class="informacion__contenido">
+                    <div class="informacion__contenido--img"><img src="../images/faceboockCircle.svg" alt="alt" /></div>
+                    <div class="informacion__contenido--text">
+                        <h6 class="m-0"><strong>Faceboock</strong></h6>
+                        <a href="https://www.facebook.com/PlannerApp360/" target="_blanck">PlannerApp 360</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="modalin position-fixed h-100 w-100 align-items-center justify-content-center">
-      <div class="modalTxt">
-        <h3 class="h5 text-white">Llamenos Mediante:</h3><a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=+50670412463" target="_blanck" type="submit">whatsapp</a><a class="btn btn-dark" href="tel: +506 7041 2463" type="submit">Llamada Telefonica</a>
-      </div>
+        <div class="modalTxt">
+            <h3 class="h5 text-white">Llamenos Mediante:</h3><a class="btn btn-primary"
+                href="https://api.whatsapp.com/send?phone=+50670412463" target="_blanck" type="submit">whatsapp</a><a
+                class="btn btn-dark" href="tel: +506 7041 2463" type="submit">Llamada Telefonica</a>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script src="../js/boostrapt.js"></script>
     <script src="../js/main.js"></script>
-  </body>
+</body>
+
 </html>

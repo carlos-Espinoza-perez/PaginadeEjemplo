@@ -12,9 +12,18 @@
             display flex
             justify-content: space-evenly
             position relative !important
-            background: colorPrimario 
+            // background-color transparent 
             align-items: center
             padding: 20px 0px
+
+            &:before
+                content: ""
+                background-color: #222
+                // opacity 0.6
+                z-index: -1
+                position absolute
+                width: 100%
+                height 100%
 
             &__circle
                 margin: auto 10px
@@ -34,7 +43,7 @@
                 p 
                     width: 60%
 
-                button 
+                a 
                     display: block !important
                     margin: 10px auto
 
@@ -56,8 +65,8 @@
             h3
                 margin-bottom: 5px
 
-            button 
-                display: none !important
+            // a 
+            //     display: none !important
 
 
 
@@ -145,3 +154,50 @@
 
     div .lento
         height 130px !important
+
+
+    .animacion_0
+        background-image: url("../images/planificacionProyecto.png")
+        background-position: center
+        background-size: 100%
+        position relative
+        animation: fondoMenu 15s linear infinite alternate;
+
+    .animacion_1
+        background-image: url("../images/controlDeAcceso.png")
+        background-position: center
+        background-size: 100%
+        position relative
+        animation: fondoMenu 15s linear infinite alternate;    
+        
+    .animacion_2
+        background-image: url("../images/RRHH.png")
+        background-position: center
+        background-size: 100%
+        position relative
+        animation: fondoMenu 15s linear infinite alternate;    
+
+
+    @keyframes fondoMenu 
+        0%
+            background-size: 200%;
+            background-position: center;
+        
+        20% 
+            background-position: right top;
+        
+
+        40% 
+            background-position: center;
+            background-size: 100%;
+        
+        60%
+            background-position: left top;
+        
+
+        80% 
+            background-position: left -100px;
+        
+        100% 
+            background-position: right -100px;
+            background-size: 200%;

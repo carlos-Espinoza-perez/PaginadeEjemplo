@@ -10,7 +10,9 @@ mixin BeneficiosTodos(inicio, carusel, medio, imagen, titulo, text, txt1)
                     .beneficios__txt.txt
                         h3.tituloBeneficio #{titulo}
                         p #{text}
-                        button.btn.btn-outline-primary(type="button") Leer Más 
+                        p.d-none #{txt1}
+                        .w-100.d-flex.justify-conten-center
+                            a(href="#Carusel").btn.btn-outline-primary(type="button") Leer Más 
 
 
     else 
@@ -20,7 +22,8 @@ mixin BeneficiosTodos(inicio, carusel, medio, imagen, titulo, text, txt1)
                     h3.tituloBeneficio #{titulo}
                     p #{text}
                     p.txtAdd.d-block.text-justify #{txt1}
-                    button.btn.btn-outline-primary(type="button") Leer Más 
+                    .w-100.d-flex.justify-conten-center
+                        a(href="#Carusel").btn.btn-outline-primary(type="button") Leer Más 
                 .beneficios__circle
                     img(src=imagen, alt="alt")
 
@@ -32,7 +35,8 @@ mixin BeneficiosTodos(inicio, carusel, medio, imagen, titulo, text, txt1)
                     h3.tituloBeneficio #{titulo}
                     p #{text}
                     p.txtAdd.d-block.text-justify #{txt1}
-                    button.btn.btn-outline-primary(type="button") Leer Más 
+                    .w-100.d-flex.justify-conten-center
+                        a(href="#Carusel").btn.btn-outline-primary(type="button") Leer Más 
 
 
 mixin lineaMedia(clases)
@@ -49,6 +53,10 @@ mixin textFooter(imagen, titulo, etiqueta, txt, $href, $target)
                 strong #{titulo}
             #{etiqueta}(href=`${$href}` target=`${$target}`) #{txt}
 
+//- mixin caruselItem(active, n) 
+//-     div(class=`carousel-item ${active}`)
+//-         img(src=`../images/img${n}.png`, alt="alt").w-100.d-block
+
 mixin caruselItem(active, n) 
     div(class=`carousel-item ${active}`)
-        img(src=`../images/img${n}.png`, alt="alt").w-100.d-block
+        img(src=`${n}`, alt="alt").w-100.d-block
